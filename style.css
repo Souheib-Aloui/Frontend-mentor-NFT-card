@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+.attribution {
+   font-size: 11px;
+   text-align: center;
+}
+.attribution a {
+   color: hsl(228, 45%, 44%); }
+  
+:root {
+  --soft-blue: hsl(215, 51%, 70%) ;
+  --cyan: hsl(178, 100%, 50%);
+  --main-darkblue:  hsl(217, 54%,11%);
+  --card-darkblue : hsl(216, 50%, 16%);
+  --line-darkblue: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+ }
+body {
+font-family: 'Outfit', sans-serif;
+ background-color: var(--main-darkblue);
+ display: flex;
+ height: 100vh;
+ font-size: 1rem;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 5rem;
+}
+.card {
+  background-color: var(--card-darkblue);
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+}
+.image-container {
+  
+  position: relative;
+}
+.image-container div {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(178, 100%, 50%, 60%);
+  opacity: 0;
+}
+.image-container div:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.image-container div img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img {
+max-width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+border-radius: 12px;
+overflow: hidden;
+}
+.title {
+  color: var(--white);
+  font-weight: 600;
+  
+}
+.description {
+  color: var(--soft-blue);
+  font-size: 1rem;
+  font-weight: 300;
+}
+.info {
+  display: flex;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--line-darkblue);
+ 
+}
+.ethereum-price {
+  color: var(--cyan);
+  font-weight: 400;
+}
+.ethereum-price,
+.time {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem ;
+
+}
+
+.time {
+  justify-content: flex-end;
+  overflow: hidden;
+  color: var(--soft-blue);
+  font-weight: 300;
+}
+.creater-info {
+  display: flex;
+  align-items: center;
+}
+.profile-image-container {
+  margin-right: 10px;
+}
+.profile-image-container img {
+  max-width: 28px;
+  width: 100%;
+
+} 
+.author-decleration {
+  font-weight: 300;
+  color: var(--soft-blue) ;
+}
+.author-name {
+  color: var(--white);
+  font-weight: 400;
+ }
+ .author-name:hover , .title:hover {
+  color: var(--cyan);
+  cursor: pointer;
+ }
+@media (max-width: 375px) {
+  .card {
+    margin: 1rem;
+    
+
+  }
+}
